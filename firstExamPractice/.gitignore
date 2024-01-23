@@ -1,0 +1,8 @@
+# VS Code directories
+.vscode/
+.vs/
+
+**/bin
+**/obj
+**/*.user
+**/Logs/*
