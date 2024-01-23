@@ -58,6 +58,7 @@
 //    Console.WriteLine("Size is not in correct formet");
 //}
 
+/*
 //single dimension array
 string line = Console.ReadLine();
 int size = 0;
@@ -88,6 +89,16 @@ grid[0, 1] = 2;
 grid[1, 1] = 4;
 
 Console.WriteLine(grid[1, 1]);
+
+*/
+
+
+//create normal array
+int[] array = new int[4];
+string[] keywords = ["amit", "toma", "golu", "soma", "buri"];
+
+Console.WriteLine(keywords[4]);
+
 
 
 
