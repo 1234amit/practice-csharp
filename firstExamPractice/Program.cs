@@ -204,7 +204,7 @@ for(int i=0; i<jaggedArray.GetLength(0); i++)
 
 }
 
-*/
+
 
 int[][] jaggedArray = new int[3][];
 
@@ -230,6 +230,127 @@ int[][,] jaggedArray3 =
 
 Console.Write("{0}", jaggedArray3[0][1, 0]);
 Console.WriteLine(jaggedArray3.Length);
+
+*/
+
+/*
+//operators
+//increment and decrement operator
+int i = 3;
+Console.WriteLine(i);
+Console.WriteLine(i++);
+//Console.WriteLine(--i);
+Console.WriteLine(i);
+
+double a = 1.5;
+Console.WriteLine(a);   // output: 1.5
+Console.WriteLine(++a); // output: 2.5
+Console.WriteLine(a);   // output: 2.5
+
+int i2 = 3;
+Console.WriteLine(i2);   // output: 3
+Console.WriteLine(i2--); // output: 3
+Console.WriteLine(i2);   // output: 2
+
+double a2 = 1.5;
+Console.WriteLine(a2);   // output: 1.5
+Console.WriteLine(--a2); // output: 0.5
+Console.WriteLine(a2);   // output: 0.5
+
+#region Example 3 - Math operators
+Console.WriteLine(5 * 2);       // output: 10
+Console.WriteLine(0.5 * 2.5);   // output: 1.25
+Console.WriteLine(0.1m * 23.4m);  // output: 2.34
+
+Console.WriteLine(13 / 5);  // output: 2
+Console.WriteLine(-13 / 5);   // output: -2
+Console.WriteLine(13 / -5);   // output: -2
+
+
+Console.WriteLine("Hello amit how are you ?");
+
+
+
+uint w = 0b_1111_1000;
+uint v = 0b_0001_1100;
+uint z = w ^ v;
+Console.WriteLine(Convert.ToString(z, toBase: 2));
+
+
+uint a1 = 0b_1111_1000;
+uint b1 = 0b_1001_1101;
+
+uint c1 = a1 & b1;
+Console.WriteLine(Convert.ToString(c1, toBase: 2));
+
+
+
+int[][] jaggedArray = new int[3][];
+jaggedArray[0] = new int[] { 1, 2, 3 };
+jaggedArray[1] = new int[] { 4, 5, 6, 7 };
+jaggedArray[2] = new int[] { 8, 9 };
+
+//problem: Calculate and print the average of each subarray
+Console.WriteLine("Average of each subarray:");
+
+foreach (int[] subarray in jaggedArray)
+{
+    double sum = 0;
+    foreach(int value in subarray)
+    {
+        sum += value;
+    }
+
+    double avg = subarray.Length > 0 ? sum / subarray.Length : 0;
+    Console.WriteLine(avg);
+}
+
+
+//dynamically created jagged array
+
+int[][] jaggedArray = new int[3][];
+jaggedArray[0] = new int[] { 1, 2, 3 };
+jaggedArray[1] = new int[] { 4, 5, 6, 7 };
+jaggedArray[2] = new int[] { 8, 9 };
+
+Console.WriteLine("Average of each subarray");
+foreach (int[] subArray in jaggedArray)
+{
+    double sum = 0;
+    foreach(int value in subArray)
+    {
+        sum += value;
+    }
+
+    double avg = subArray.Length > 0 ? sum / subArray.Length : 0;
+    Console.WriteLine(avg);
+}
+*/
+
+//dynamic jagged array
+int count = int.Parse(Console.ReadLine());
+int[][] dynamicJaggedArray = new int[count][];
+
+for (int i = 0; i < count; i++)
+{
+    Console.WriteLine($"Enter the number of items for subarray {i + 1}:");
+    int items = int.Parse(Console.ReadLine());
+    dynamicJaggedArray[i] = new int[items];
+
+    for (int j = 0; j < items; j++)
+    {
+        Console.WriteLine($"Enter item {j + 1} for subarray {i + 1}:");
+        int item = int.Parse(Console.ReadLine());
+        dynamicJaggedArray[i][j] = item;
+    }
+}
+
+
+
+
+
+
+
 
 
 
